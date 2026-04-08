@@ -1,6 +1,6 @@
 #!/bin/bash
 
-git config --global --add http.https://devopstest.scb.intra/SCB/SCB/_git/.extraHeader "AUTHORIZATION: Basic $(printf ":$GIT_PERSONAL_ACCESS_TOKEN" | base64 -w0)"
+git config --global --add http.https://devops.scb.intra/SCB/Containerplattform/_git/.extraHeader "AUTHORIZATION: Basic $(printf ":$GIT_PERSONAL_ACCESS_TOKEN" | base64 -w0)"
 
 sudo apt-get update
 sudo apt-get install -y curl gnupg apt-transport-https
