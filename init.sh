@@ -2,6 +2,8 @@
 
 git config --global --add http.https://devopstest.scb.intra/SCB/SCB/_git/.extraHeader "AUTHORIZATION: Basic $(printf ":$GIT_PERSONAL_ACCESS_TOKEN" | base64 -w0)"
 
+pip install pyodbc
+
 sudo apt-get update
 sudo apt-get install -y curl gnupg apt-transport-https
 
@@ -19,4 +21,4 @@ sudo apt-get install -y unixodbc unixodbc-dev krb5-user
 
 #sudo apt-get install -y krb5-user
 
-pip install pyodbc
+#pip install pyodbc
