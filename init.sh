@@ -2,8 +2,6 @@
 
 git config --global --add http.https://devopstest.scb.intra/SCB/SCB/_git/.extraHeader "AUTHORIZATION: Basic $(printf ":$GIT_PERSONAL_ACCESS_TOKEN" | base64 -w0)"
 
-#pip install pyodbc
-
 sudo apt-get update
 sudo apt-get install -y curl gnupg apt-transport-https
 
@@ -14,7 +12,6 @@ sudo curl https://packages.microsoft.com/config/ubuntu/22.04/prod.list \
 sudo apt-get update
 sudo ACCEPT_EULA=Y apt-get install -y msodbcsql18
 sudo apt-get install -y unixodbc unixodbc-dev 
-#krb5-user
 
 sudo debconf-set-selections <<< "krb5-config krb5-config/default_realm string SCB.INTRA"
 sudo debconf-set-selections <<< "krb5-config krb5-config/kerberos_servers string SCB.INTRA"
