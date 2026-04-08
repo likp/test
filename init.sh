@@ -13,12 +13,13 @@ sudo curl https://packages.microsoft.com/config/ubuntu/22.04/prod.list \
     -o /etc/apt/sources.list.d/mssql-release.list
 sudo apt-get update
 sudo ACCEPT_EULA=Y apt-get install -y msodbcsql18
-sudo apt-get install -y unixodbc unixodbc-dev krb5-user
+sudo apt-get install -y unixodbc unixodbc-dev 
+#krb5-user
 
-#sudo debconf-set-selections <<< "krb5-config krb5-config/default_realm string SCB.INTRA"
-#sudo debconf-set-selections <<< "krb5-config krb5-config/kerberos_servers string SCB.INTRA"
-#sudo debconf-set-selections <<< "krb5-config krb5-config/admin_server string SCB.INTRA"
+sudo debconf-set-selections <<< "krb5-config krb5-config/default_realm string SCB.INTRA"
+sudo debconf-set-selections <<< "krb5-config krb5-config/kerberos_servers string SCB.INTRA"
+sudo debconf-set-selections <<< "krb5-config krb5-config/admin_server string SCB.INTRA"
 
-#sudo apt-get install -y krb5-user
+sudo apt-get install -y krb5-user
 
 #pip install pyodbc
